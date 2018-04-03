@@ -1,0 +1,14 @@
+timg = bitxor(uint8(key),uint8(timg));
+timg = timg(:);
+for m = size(timg,1):-1:1
+
+    t1 = timg(m);
+timg(m)=timg(in(m));
+timg(in(m))=t1;
+
+end
+%Decryption End
+timg = reshape(timg,[256 256]);
+
+figure(2)
+imshow(timg);
