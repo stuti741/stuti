@@ -1,0 +1,8 @@
+timg = timg(:);
+for m = 1:size(timg,1)
+
+    t1 = timg(m);
+timg(m)=timg(in(m));
+timg(in(m))=t1;
+
+end
