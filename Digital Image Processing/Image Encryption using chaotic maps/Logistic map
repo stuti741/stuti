@@ -1,0 +1,13 @@
+img = imread('image1.png');
+img = rgb2gray(img);
+timg = img;
+r = 3.62;
+x(1) = 0.7;
+s = 256*256;
+%Creation of Logistic function
+for n=1:s-1
+    x(n+1) = r*x(n)*(1-x(n));
+end
+
+[so,in] = sort(x);
+
